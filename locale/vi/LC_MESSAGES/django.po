@@ -1,0 +1,407 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-31 14:30+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\student_management_app\templates\base.html:8
+#, fuzzy
+#| msgid "Student Management System | Staff Dashboard"
+msgid "Student Management System | Dashboard"
+msgstr "Hệ Thống Quản Lý Sinh Viên | Giáo viên"
+
+#: .\student_management_app\templates\login.html:12
+msgid "Student"
+msgstr "Hệ Thống"
+
+#: .\student_management_app\templates\login.html:12
+msgid " Management System"
+msgstr " Quản Lý Sinh Viên"
+
+#: .\student_management_app\templates\login.html:17
+msgid "Sign in to Student Management System"
+msgstr "Đăng nhập vào hệ thống quản lý sinh viên"
+
+#: .\student_management_app\templates\login.html:39
+msgid "Sign In"
+msgstr "Đăng Nhập"
+
+#: .\student_management_app\templates\staff_template\add_result_template.html:21
+#: .\student_management_app\templates\staff_template\sidebar_template.html:70
+msgid "Add Result"
+msgstr "Thêm Điểm"
+
+#: .\student_management_app\templates\staff_template\add_result_template.html:55
+#: .\student_management_app\templates\staff_template\take_attendance_template.html:53
+#: .\student_management_app\templates\staff_template\update_attendance_template.html:53
+#: .\student_management_app\templates\student_template\student_view_attendance.html:55
+#: .\student_management_app\templates\student_template\student_view_result.html:29
+msgid "Subject"
+msgstr "Môn Học"
+
+#: .\student_management_app\templates\staff_template\add_result_template.html:64
+#: .\student_management_app\templates\staff_template\take_attendance_template.html:62
+#: .\student_management_app\templates\staff_template\update_attendance_template.html:62
+msgid "Session Year"
+msgstr "Kỳ học"
+
+#: .\student_management_app\templates\staff_template\add_result_template.html:77
+#: .\student_management_app\templates\staff_template\take_attendance_template.html:75
+msgid "Fetch Student"
+msgstr "Tìm Sinh Viên"
+
+#: .\student_management_app\templates\staff_template\base_template.html:52
+msgid "Student Management System | Staff Dashboard"
+msgstr "Hệ Thống Quản Lý Sinh Viên | Giáo viên"
+
+#: .\student_management_app\templates\staff_template\base_template.html:64
+#: .\student_management_app\templates\staff_template\staff_profile.html:19
+#: .\student_management_app\templates\staff_template\staff_profile.html:89
+#: .\student_management_app\templates\student_template\base_template.html:64
+#: .\student_management_app\templates\student_template\student_profile.html:19
+#: .\student_management_app\templates\student_template\student_profile.html:89
+msgid "Update Profile"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\base_template.html:69
+#: .\student_management_app\templates\student_template\base_template.html:69
+msgid "Logout"
+msgstr "Đăngg Xuất"
+
+#: .\student_management_app\templates\staff_template\base_template.html:97
+#: .\student_management_app\templates\student_template\base_template.html:97
+#: .\student_management_app\templates\student_template\sidebar_template.html:35
+msgid "Home"
+msgstr "Trang Chủ"
+
+#: .\student_management_app\templates\staff_template\footer.html:5
+msgid " All rights reserved."
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\sidebar_template.html:8
+msgid "Open University"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\sidebar_template.html:34
+msgid " Home"
+msgstr " Trang chủ"
+
+#: .\student_management_app\templates\staff_template\sidebar_template.html:46
+msgid " Take Attendance"
+msgstr " Điểm Danh"
+
+#: .\student_management_app\templates\staff_template\sidebar_template.html:58
+msgid " View Update Attendance"
+msgstr " Xem, Cập Nhập Điểm Danh"
+
+#: .\student_management_app\templates\staff_template\sidebar_template.html:82
+msgid "Apply Leave"
+msgstr "Xin Nghỉ Phép"
+
+#: .\student_management_app\templates\staff_template\sidebar_template.html:94
+msgid "Feedback"
+msgstr "Phản Hồi"
+
+#: .\student_management_app\templates\staff_template\staff_apply_leave_template.html:19
+#: .\student_management_app\templates\student_template\student_apply_leave.html:19
+msgid "Apply For Leave"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_apply_leave_template.html:54
+#: .\student_management_app\templates\staff_template\staff_apply_leave_template.html:94
+#: .\student_management_app\templates\student_template\student_apply_leave.html:54
+#: .\student_management_app\templates\student_template\student_apply_leave.html:94
+msgid "Leave Date"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_apply_leave_template.html:59
+#: .\student_management_app\templates\student_template\student_apply_leave.html:59
+msgid "Leave Reason"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_apply_leave_template.html:68
+#: .\student_management_app\templates\student_template\sidebar_template.html:71
+#: .\student_management_app\templates\student_template\student_apply_leave.html:68
+msgid "Apply for Leave"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_apply_leave_template.html:85
+#: .\student_management_app\templates\student_template\student_apply_leave.html:85
+msgid "Leave Apply History"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_apply_leave_template.html:95
+#: .\student_management_app\templates\student_template\student_apply_leave.html:95
+msgid "Leave Message"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_apply_leave_template.html:96
+#: .\student_management_app\templates\student_template\student_apply_leave.html:96
+msgid "Status"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_apply_leave_template.html:107
+#: .\student_management_app\templates\student_template\student_apply_leave.html:107
+msgid "Approved"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_apply_leave_template.html:109
+#: .\student_management_app\templates\student_template\student_apply_leave.html:109
+msgid "Rejected"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_apply_leave_template.html:111
+#: .\student_management_app\templates\student_template\student_apply_leave.html:111
+msgid "Pending"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_feedback_template.html:19
+#: .\student_management_app\templates\student_template\student_feedback.html:19
+msgid "Leave a Feedback Message"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_feedback_template.html:54
+#: .\student_management_app\templates\staff_template\staff_feedback_template.html:89
+#: .\student_management_app\templates\student_template\student_feedback.html:54
+#: .\student_management_app\templates\student_template\student_feedback.html:89
+msgid "Feedback Message"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_feedback_template.html:63
+#: .\student_management_app\templates\student_template\student_feedback.html:63
+msgid "Leave a Feedback"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_feedback_template.html:80
+msgid "Feedback History"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_feedback_template.html:90
+#: .\student_management_app\templates\student_template\student_feedback.html:90
+msgid "Feedback Reply"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_home_template.html:23
+msgid "Students Under Me"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_home_template.html:28
+#: .\student_management_app\templates\staff_template\staff_home_template.html:43
+#: .\student_management_app\templates\staff_template\staff_home_template.html:73
+#: .\student_management_app\templates\student_template\student_home_template.html:28
+#: .\student_management_app\templates\student_template\student_home_template.html:43
+#: .\student_management_app\templates\student_template\student_home_template.html:58
+#: .\student_management_app\templates\student_template\student_home_template.html:73
+msgid "More info"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_home_template.html:38
+msgid "Total Attendance Taken"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_home_template.html:53
+msgid "Total Leave Taken"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_home_template.html:58
+msgid "More info "
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_home_template.html:68
+#: .\student_management_app\templates\student_template\student_home_template.html:68
+msgid "Total Subjects"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_home_template.html:86
+msgid "Leave Status Chart"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_home_template.html:106
+msgid "Subjects Attend Chart"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_home_template.html:130
+msgid "Student Attendance Data"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_profile.html:56
+#: .\student_management_app\templates\student_template\student_profile.html:56
+msgid "Username"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_profile.html:61
+#: .\student_management_app\templates\student_template\student_profile.html:61
+msgid "Email"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_profile.html:66
+#: .\student_management_app\templates\student_template\student_profile.html:66
+msgid "First Name"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_profile.html:71
+#: .\student_management_app\templates\student_template\student_profile.html:71
+msgid "Last Name"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_profile.html:76
+#: .\student_management_app\templates\student_template\student_profile.html:76
+msgid "Address"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\staff_profile.html:81
+msgid "Password "
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\take_attendance_template.html:19
+msgid "Take Attendance"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\update_attendance_template.html:19
+msgid "View Update Attendance"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\update_attendance_template.html:75
+msgid "Fetch Attendance Date"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\update_attendance_template.html:80
+msgid "Attendance Date"
+msgstr ""
+
+#: .\student_management_app\templates\staff_template\update_attendance_template.html:99
+msgid "Fetch Student Data"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\base_template.html:8
+#: .\student_management_app\templates\student_template\base_template.html:52
+#, fuzzy
+#| msgid "Student Management System | Staff Dashboard"
+msgid "Student Management System | Student Dashboard"
+msgstr "Hệ Thống Quản Lý Sinh Viên | Giáo viên"
+
+#: .\student_management_app\templates\student_template\sidebar_template.html:47
+#: .\student_management_app\templates\student_template\student_view_attendance.html:19
+#, fuzzy
+#| msgid " View Update Attendance"
+msgid "View Attendance"
+msgstr " Xem, Cập Nhập Điểm Danh"
+
+#: .\student_management_app\templates\student_template\sidebar_template.html:59
+#, fuzzy
+#| msgid "Add Result"
+msgid "View Result"
+msgstr "Thêm Điểm"
+
+#: .\student_management_app\templates\student_template\sidebar_template.html:83
+#, fuzzy
+#| msgid "Feedback"
+msgid "Send Feedback"
+msgstr "Phản Hồi"
+
+#: .\student_management_app\templates\student_template\student_attendance_data.html:50
+msgid "Attendance Data for"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_attendance_data.html:61
+msgid "Date :"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_attendance_data.html:63
+msgid "[ Status : Present ]"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_attendance_data.html:73
+msgid "[ Status : Absent ]"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_feedback.html:80
+#, fuzzy
+#| msgid "Feedback"
+msgid "Feedback Histor"
+msgstr "Phản Hồi"
+
+#: .\student_management_app\templates\student_template\student_home_template.html:23
+#, fuzzy
+#| msgid " Take Attendance"
+msgid "TotalAttendance"
+msgstr " Điểm Danh"
+
+#: .\student_management_app\templates\student_template\student_home_template.html:38
+msgid "Absent"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_home_template.html:53
+msgid "Present"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_home_template.html:86
+#, fuzzy
+#| msgid " Take Attendance"
+msgid "Total Attendance Chart"
+msgstr " Điểm Danh"
+
+#: .\student_management_app\templates\student_template\student_home_template.html:106
+msgid "Attendance Statistics by Subjects"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_profile.html:81
+msgid "Password"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_view_attendance.html:66
+msgid "Start Date"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_view_attendance.html:73
+msgid "End Date"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_view_attendance.html:85
+#, fuzzy
+#| msgid " Take Attendance"
+msgid "Fetch Attendance"
+msgstr " Điểm Danh"
+
+#: .\student_management_app\templates\student_template\student_view_result.html:20
+#, fuzzy
+#| msgid "Add Result"
+msgid "Result"
+msgstr "Thêm Điểm"
+
+#: .\student_management_app\templates\student_template\student_view_result.html:30
+msgid "Assignments Marks"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_view_result.html:31
+msgid "Exam Marks"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_view_result.html:32
+msgid "status"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_view_result.html:44
+msgid "Pass"
+msgstr ""
+
+#: .\student_management_app\templates\student_template\student_view_result.html:46
+msgid "Fail"
+msgstr ""
+
+#~ msgid " Update Profile"
+#~ msgstr "Cập Nhập Thông Tin"
