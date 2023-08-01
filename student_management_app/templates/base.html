@@ -41,7 +41,19 @@
       crossorigin="anonymous"
     />
 </head>
+<style>
+  .login-card-body, .register-card-body ,.login-page{
+    background:var(--bs-background-change);
+    }
+  [data-bs-theme=light]{
+    --bs-background-change: #e3e3e3 !important;
 
+  } 
+  [data-bs-theme=dark] {
+    --bs-background-change: #212529 !important;
+   
+}
+</style>
 
 
 {% block content %}

@@ -61,24 +61,7 @@
           <!-- /.col -->
       </div>
       </form>
-      <div class="dropdown text-center mb-3" >
-        <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          language
-        </button>
-        <ul name="language" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          {% get_current_language as LANGUAGE_CODE %}
-          {% get_available_languages as LANGUAGES %}
-          {% get_language_info_list for LANGUAGES as languages %}
-          {% for language in languages %}
-           <li  class="dropdown-item" >
-            <a href="/{{language.code}}">
-              {{ language.name_local }} 
-              
-            </a>
-            </li>
-          {% endfor %}
-        <ul/>
-      </div>
+      {% include 'language.html' %}
 
     </div>
   </div>

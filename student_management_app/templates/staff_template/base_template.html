@@ -35,8 +35,21 @@
     {% endblock custom_css %}
 
 </head>
+<style>
+    [data-bs-theme=light]{
+    --bs-background-change: #e3e3e3 !important;
 
-<body class="hold-transition sidebar-mini layout-fixed">
+  } 
+  [data-bs-theme=dark] {
+    --bs-background-change: #212529 !important;
+   
+}
+.content-wrapper,.card{
+  background: var(--bs-background-change);
+}
+</style>
+
+<body class="hold-transition sidebar-mini layout-fixed" data-bs-theme="light">
   <div class="wrapper">
 
   <!-- Navbar -->
@@ -71,6 +84,8 @@
         </div>
       </li>
     </ul>
+    {% include 'darkmode.html' %}
+
 
     </nav>
     <!-- /.navbar -->
