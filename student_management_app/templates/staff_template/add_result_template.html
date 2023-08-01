@@ -18,11 +18,11 @@
                     {% csrf_token %}
                     <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">{% blocktrans %}Add Result{% endblocktrans %}</h3>
+                        <h3 class="card-title">{% trans "Add Result"%}</h3>
                     </div>
                     <!-- /.card-header -->
 
-                                {% comment %} Display Messages {% endcomment %}
+                                {% comment %} {% trans "Display"} Messages {% endcomment %}
                                 {% if messages %}
                                 <div class="form-group">
                                 <div class="col-12">
@@ -51,7 +51,7 @@
                         <div class="card-body">
                            
                             <div class="form-group">
-                                <label>{% blocktrans %}Subject{% endblocktrans %} </label>
+                                <label>{% trans "Subject%} </label>
                                 <select class="form-control" name="subject" id="subject">
                                     {% for subject in subjects %}
                                         <option value="{{ subject.id }}">{{ subject.subject_name }}</option>
@@ -60,7 +60,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>{% blocktrans %}Session Year{% endblocktrans %}</label>
+                                <label>{% trans "Session Year" %}</label>
                                 <select class="form-control" name="session_year" id="session_year">
                                     {% for session_year in session_years %}
                                         <option value="{{ session_year.id }}">{{ session_year.session_start_year }} to {{ session_year.session_end_year }}</option>
@@ -73,10 +73,10 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                        <button type="button" class="btn btn-primary" id="fetch_student">{% blocktrans %}Fetch Student{% endblocktrans %}</button>
+                        <button type="button" class="btn btn-primary" id="fetch_student">{% trans "Fetch Student"%}</button>
                         </div>
 
-                        {% comment %}{% blocktrans %} Displaying Students Here{% endblocktrans %} {% endcomment %}
+                        {% comment %}{% trans " Displaying Students Here" %} {% endcomment %}
 
                         <div class="card-footer" id="student_data">
                         </div> 

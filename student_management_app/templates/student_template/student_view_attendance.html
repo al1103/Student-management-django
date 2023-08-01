@@ -16,11 +16,11 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">{% blocktrans %}View Attendance{%endblocktrans %}</h3>
+                        <h3 class="card-title">{% trans "View Attendance"%}</h3>
                     </div>
                     <!-- /.card-header -->
 
-                                {% comment %}Display Messages{% endcomment %}
+                                {% comment %} {% trans "Display Messages "%}{% endcomment %}
                                 {% if messages %}
                                 <div class="form-group">
                                 <div class="col-12">
@@ -51,7 +51,7 @@
                         <div class="card-body">
                            
                             <div class="form-group">
-                                <label>{% blocktrans %}Subject{%endblocktrans %}</label>
+                                <label>{% trans "Subject"%} </label>
                                 <select class="form-control" name="subject" id="subject">
                                     {% for subject in subjects %}
                                         <option value="{{ subject.id }}">{{ subject.subject_name }}</option>
@@ -62,14 +62,14 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label>{% blocktrans %}Start Date{%endblocktrans %}</label>
+                                        <label>{% trans "Start Date"%} </label>
                                         <input type="date" class="form-control" name="start_date" />
                                     </div>
                                 </div>
                                 
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label>{% blocktrans %}End Date{%endblocktrans %}</label>
+                                        <label>{% trans "End Date"%} </label>
                                         <input type="date" class="form-control" name="end_date" />
                                     </div>
                                 </div>
@@ -81,10 +81,10 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                        <button type="submit" class="btn btn-primary" id="fetch_student">{% blocktrans %}Fetch Attendance{%endblocktrans %}</button>
+                        <button type="submit" class="btn btn-primary" id="fetch_student">{% trans "Fetch Attendance"%}</button>
                         </div>
 
-                        {% comment %}Displaying Students Here{% endcomment %}
+                        {% comment %} {% trans "Displaying Students Here"%} {% endcomment %}
 
                         <div class="card-footer" id="student_data">
                         </div> 
