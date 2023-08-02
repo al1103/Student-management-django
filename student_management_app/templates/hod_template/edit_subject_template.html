@@ -5,6 +5,7 @@
 {% endblock page_title %}
 
 {% block main_content %}
+{% load i18n %}
 
 {% load static %}
 
@@ -16,7 +17,7 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Edit Subject</h3>
+                        <h3 class="card-title">{% blocktrans %}Edit Subject{% endblocktrans %}</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
@@ -52,7 +53,7 @@
 
                         <div class="card-body">
                             <div class="form-group">
-                                <label>Subject Name </label>
+                                <label>{% blocktrans %}Subject Name {% endblocktrans %}</label>
                                 <input type="text" class="form-control" name="subject" value="{{ subject.subject_name }}">
                             </div>
 
@@ -81,7 +82,7 @@
 
                         <div class="card-footer">
                         
-                        <button type="submit" class="btn btn-primary">Update Subject</button>
+                        <button type="submit" class="btn btn-primary">{% blocktrans %}Update Subject{% endblocktrans %}</button>
                         </div>
                     </form>
                     </div>

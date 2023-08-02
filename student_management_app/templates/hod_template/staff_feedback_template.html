@@ -5,6 +5,7 @@
 {% endblock page_title %}
 
 {% block main_content %}
+{% load i18n %}
 
 {% load static %}
 
@@ -16,7 +17,7 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Staff Feedback</h3>
+                            <h3 class="card-title">{% blocktrans %}Staff Feedback{% endblocktrans %}</h3>
                         </div>
                         <!-- /.card-header -->
 
@@ -25,11 +26,11 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Staff ID</th>
-                                    <th>Staff Name</th>
-                                    <th>Message</th>
-                                    <th>Sended On</th>
-                                    <th>Reply</th>
+                                    <th>{% blocktrans %}Staff ID{% endblocktrans %}</th>
+                                    <th>{% blocktrans %}Staff Name{% endblocktrans %}</th>
+                                    <th>{% blocktrans %}Message{% endblocktrans %}</th>
+                                    <th>{% blocktrans %}Sended On{% endblocktrans %}</th>
+                                    <th>{% blocktrans %}Reply{% endblocktrans %}</th>
                                 </tr>
                                 </thead>
 
@@ -43,7 +44,7 @@
                                     <td>{{ feedback.created_at }}</td>
                                     <td>
                                         {% if feedback.feedback_reply == "" %}
-                                            <button class="btn btn-success reply_open_modal" data-toggle="modal" data-target="#replyModal">Reply</button>
+                                            <button class="btn btn-success reply_open_modal" data-toggle="modal" data-target="#replyModal">{% blocktrans %}Reply{% endblocktrans %}</button>
                                         {% else %}
                                             {{ feedback.feedback_reply }}
                                         {% endif %}
@@ -71,19 +72,19 @@
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Reply Feedback</h5>
+                <h5 class="modal-title" id="exampleModalLabel">{% blocktrans %}Reply Feedback{% endblocktrans %}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <p>Reply to: <b><span id="reply_name"></span></b></p>
+                <p>{% blocktrans %}Reply to: {% endblocktrans %}<b><span id="reply_name"></span></b></p>
                 <input type="hidden" id="reply_id" name="reply_id" />
                 <textarea class="form-control" rows="5" id="reply_message"></textarea>
             </div>
             <div class="modal-footer">
-                {% comment %} <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> {% endcomment %}
-                <button type="button" class="btn btn-primary btn-block" id="reply_button">Reply</button>
+                {% comment %} <button type="button" class="btn btn-secondary" data-dismiss="modal">{% blocktrans %}Close{% endblocktrans %}</button> {% endcomment %}
+                <button type="button" class="btn btn-primary btn-block" id="reply_button">{% blocktrans %}Reply{% endblocktrans %}</button>
             </div>
             </div>
         </div>
@@ -109,7 +110,7 @@
             $(document).on("click", "#reply_button", function(){
                 //Disabling the Button while data is being saved in Server
                 $(this).attr("disabled", "disabled")
-                $(this).text("Sending Reply...")
+                $(this).text("Đang gửi phản hồi...")
 
                 //console.log("SAVE")
                 
@@ -131,11 +132,11 @@
                     
                     if(response=="True")
                     {
-                        alert("Reply Sent!")
+                        alert("Đã gửi!")
                     }
                     else
                     {
-                        alert("Failed to Send Reply!")
+                        alert("Chưa gửi được phản hồi!")
                     }
                     location.reload()
                     
@@ -143,7 +144,7 @@
                 })
 
                 .fail(function(){
-                    alert("Error in Sending Feedback Reply.")
+                    alert("Lỗi khi gửi phản hồi.")
                 })
 
             })

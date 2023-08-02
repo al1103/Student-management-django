@@ -5,6 +5,7 @@
 {% endblock page_title %}
 
 {% block main_content %}
+{% load i18n %}
 
 {% load static %}
 
@@ -16,7 +17,7 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Add Course</h3>
+                        <h3 class="card-title">{% blocktrans %}Add Course{% endblocktrans %}</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
@@ -52,7 +53,7 @@
 
                         <div class="card-body">
                             <div class="form-group">
-                                <label>Course Name </label>
+                                <label>{% blocktrans %}Course Name {% endblocktrans %}</label>
                                 <input type="text" class="form-control" name="course" placeholder="Enter Course">
                             </div>
 
@@ -60,7 +61,7 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Add Course</button>
+                        <button type="submit" class="btn btn-primary">{% blocktrans %}Add Course{% endblocktrans %}</button>
                         </div>
                     </form>
                     </div>

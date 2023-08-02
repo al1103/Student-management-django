@@ -17,7 +17,7 @@
                 <div class="col-md-12">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">{% trans "Result"%}</h3>
+                            <h3 class="card-title">{% blocktrans %}Result{%endblocktrans %}</h3>
                         </div>
 
                         <div class="card-body">
@@ -26,10 +26,10 @@
                                     <thead class="thead-light">
                                     <tr>
                                         <th>#ID</th>
-                                        <th>{% trans "Subject"%}</th>
-                                        <th>{% trans "Assignments Marks"%}</th>
-                                            <th>{% trans "Exam Marks"%}</th>
-                                            <th>{% trans "status"%}</th>
+                                        <th>{% blocktrans %}Subject{%endblocktrans %}</th>
+                                        <th>{% blocktrans %}Assignments Marks{%endblocktrans %}</th>
+                                            <th>{% blocktrans %}Exam Marks{%endblocktrans %}</th>
+                                            <th>{% blocktrans %}status{%endblocktrans %}</th>
                                     </tr>
                                     </thead>
                                     
@@ -41,9 +41,9 @@
                                         <td>{{ row.subject_exam_marks }}</td>
                                         <td>
                                             {% if row.subject_exam_marks >= 40 %}
-                                                <span class="alert alert-success">{% trans "Pass"%}</span>
+                                                <span class="alert alert-success">{% blocktrans %}Pass{%endblocktrans %}</span>
                                             {% else %}
-                                                <span class="alert alert-danger">Fail</span>
+                                                <span class="alert alert-danger">{% blocktrans %}Fail{%endblocktrans %}</span>
                                             {% endif %}
                                         </td>
                                     </tr>

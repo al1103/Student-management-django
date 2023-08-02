@@ -16,11 +16,11 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">{% trans "View Update Attendance"%}</h3>
+                        <h3 class="card-title">{% blocktrans %}View Update Attendance{%endblocktrans %}</h3>
                     </div>
                     <!-- /.card-header -->
 
-                                {% comment %}{% trans " Display Messages "%}{% endcomment %}
+                                {% comment %}{% blocktrans %} Display Messages {%endblocktrans %}{% endcomment %}
                                 {% if messages %}
                                 <div class="form-group">
                                 <div class="col-12">
@@ -49,7 +49,7 @@
                         <div class="card-body">
                            
                             <div class="form-group">
-                                <label>{% trans "Subject"%} </label>
+                                <label>{% blocktrans %}Subject{%endblocktrans %} </label>
                                 <select class="form-control" name="subject" id="subject">
                                     {% for subject in subjects %}
                                         <option value="{{ subject.id }}">{{ subject.subject_name }}</option>
@@ -58,7 +58,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>{% trans "Session Year"%} </label>
+                                <label>{% blocktrans %}Session Year{%endblocktrans %} </label>
                                 <select class="form-control" name="session_year_id" id="session_year_id">
                                     {% for session_year in session_years %}
                                         <option value="{{ session_year.id }}">{{ session_year.session_start_year }} to {{ session_year.session_end_year }}</option>
@@ -71,12 +71,12 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                            <button type="button" class="btn btn-primary" id="fetch_attendance">{% trans "Fetch Attendance Date"%}</button>
+                            <button type="button" class="btn btn-primary" id="fetch_attendance">{% blocktrans %}Fetch Attendance Date{%endblocktrans %}</button>
                         </div>
 
                         <div class="card-footer">
                             <div class="form-group" id="attendance_block" style="display:none;">
-                                    <label>{% trans "Attendance Date"%} </label>
+                                    <label>{% blocktrans %}Attendance Date{%endblocktrans %} </label>
                                     <select class="form-control" name="attendance_date" id="attendance_date">
                                         
                                     </select>
@@ -95,18 +95,18 @@
 
                             <div class="card-footer" id="fetch_student_block" style="display:none;">
 
-                                <button type="button" class="btn btn-primary" id="fetch_student">{% trans "Fetch Student Data"%}</button>
+                                <button type="button" class="btn btn-primary" id="fetch_student">{% blocktrans %}Fetch Student Data{%endblocktrans %}</button>
                             </div>
                             
                             <!-- /.card-body -->
 
                             {% comment %} <div class="card-footer">
-                                <button type="button" class="btn btn-primary" id="save_student">{% trans "Save Data"%}</button>
+                                <button type="button" class="btn btn-primary" id="save_student">{% blocktrans %}Save Data{%endblocktrans %}</button>
                             </div> {% endcomment %}
 
                         </div>
 
-                        {% comment %} {% trans "Displaying Students Here"%} {% endcomment %}
+                        {% comment %} {% blocktrans %}Displaying Students Here{%endblocktrans %} {% endcomment %}
 
                         <div class="card-footer" id="student_data">
                         </div> 

@@ -5,13 +5,14 @@
 {% endblock page_title %}
 
 {% block main_content %}
+{% load i18n %}
 
 {% load static %}
 
 <section class="content">
         <div class="container-fluid">
 
-            <a class="btn btn-primary" href="{% url 'add_session' %}" role="button">+ Add Session</a> <br/>&nbsp;
+            <a class="btn btn-primary" href="{% url 'add_session' %}" role="button">{% blocktrans %}+ Add Session{% endblocktrans %}</a> <br/>&nbsp;
 
             {% if messages %}
                                 <div class="form-group">
@@ -42,7 +43,7 @@
                     <!-- general form elements -->
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Session Details</h3>
+                            <h3 class="card-title">{% blocktrans %}Session Details{% endblocktrans %}</h3>
 
                             <div class="card-tools">
                             <div class="input-group input-group-sm" style="width: 150px;">
@@ -60,9 +61,9 @@
                             <thead>
                                 <tr>
                                 <th>ID</th>
-                                <th>Session Start Year</th>
-                                <th>Session End Year</th>
-                                <th>Action</th>
+                                <th>{% blocktrans %}Session Start Year{% endblocktrans %}</th>
+                                <th>{% blocktrans %}Session End Year{% endblocktrans %}</th>
+                                <th>{% blocktrans %}Action{% endblocktrans %}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -72,8 +73,8 @@
                                 <td>{{ session_year.session_start_year }}</td>
                                 <td>{{ session_year.session_end_year }}</td>
                                 <td>
-                                    <a href="{% url 'edit_session' session_year.id %}" class="btn btn-success">Edit</a> 
-                                    <a href="{% url 'delete_session' session_year.id %}" class="btn btn-danger">Delete</a>
+                                    <a href="{% url 'edit_session' session_year.id %}" class="btn btn-success">{% blocktrans %}Edit{% endblocktrans %}</a> 
+                                    <a href="{% url 'delete_session' session_year.id %}" class="btn btn-danger">{% blocktrans %}Delete{% endblocktrans %}</a>
                                 </td>
                                 </tr>
                                 {% endfor %}

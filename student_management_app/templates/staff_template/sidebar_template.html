@@ -5,7 +5,7 @@
       <a href="{% url 'staff_home' %}" class="brand-link">
         <img src="{% static 'dist/img/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
-        <span class="brand-text font-weight-light">{% trans "Open University"%}</span>
+        <span class="brand-text font-weight-light">{% blocktrans %}Open University{%endblocktrans %}</span>
       </a>
 
       <!-- Sidebar -->
@@ -30,9 +30,7 @@
               {% url 'staff_home' as staff_home %}
               <a href="{{ staff_home }}" class="nav-link {% if request.path == staff_home %} active {% endif %}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  {% trans " Home"%}
-                  {% comment %} <span class="right badge badge-danger">New</span> {% endcomment %}
+                <p>{% blocktrans %}Home{%endblocktrans %}{% comment %}<span class="right badge badge-danger">New</span>{% endcomment %}
                 </p>
               </a>
             </li>
@@ -40,11 +38,7 @@
             <li class="nav-item">
               {% url 'staff_take_attendance' as staff_take_attendance %}
               <a href="{{ staff_take_attendance }}" class="nav-link {% if request.path == staff_take_attendance %} active {% endif %}">
-                <i class="nav-icon fas fa-calendar-plus"></i>
-                <p>
-                  {% trans " Take Attendance"%}
-                  {% comment %} <span class="right badge badge-danger">{% trans "New"%}</span> {% endcomment %}
-                </p>
+                <i class="nav-icon fas fa-calendar-plus"></i><p>{% blocktrans %}Take Attendance{%endblocktrans %}{% comment %}<span class="right badge badge-danger">{% blocktrans %}New{%endblocktrans %}</span>{% endcomment %}</p>
               </a>
             </li>
 
@@ -52,10 +46,7 @@
               {% url 'staff_update_attendance' as staff_update_attendance %}
               <a href="{{ staff_update_attendance }}" class="nav-link {% if request.path == staff_update_attendance %} active {% endif %}">
                 <i class="nav-icon fas fa-calendar-alt"></i>
-                <p>
-                  {% trans " View Update Attendance"%}
-                  {% comment %} <span class="right badge badge-danger">New</span> {% endcomment %}
-                </p>
+                <p>{% blocktrans %} View Update Attendance{%endblocktrans %}{% comment %}<span class="right badge badge-danger">New</span>{% endcomment %}</p>
               </a>
             </li>
 
@@ -63,9 +54,7 @@
               {% url 'staff_add_result' as staff_add_result %}
               <a href="{{ staff_add_result }}" class="nav-link {% if request.path == staff_add_result %} active {% endif %}">
                 <i class="nav-icon fas fa-tasks"></i>
-                <p>
-                  {% trans "Add Result"%}
-                  {% comment %} <span class="right badge badge-danger">{% trans "New"%}</span> {% endcomment %}
+                <p>{% blocktrans %}Add Result{%endblocktrans %}{% comment %}<span class="right badge badge-danger">{% blocktrans %}New{%endblocktrans %}</span>{% endcomment %}
                 </p>
               </a>
             </li>
@@ -74,10 +63,7 @@
               {% url 'staff_apply_leave' as staff_apply_leave %}
               <a href="{{ staff_apply_leave }}" class="nav-link {% if request.path == staff_apply_leave %} active {% endif %}">
                 <i class="nav-icon fas fa-envelope-open-text"></i>
-                <p>
-                  {% trans "Apply Leave"%}
-                  {% comment %} <span class="right badge badge-danger">{% trans "New"%}</span> {% endcomment %}
-                </p>
+                <p>{% blocktrans %}Apply Leave{%endblocktrans %}{% comment %} <span class="right badge badge-danger">{% blocktrans %}New{%endblocktrans %}</span>{% endcomment %}</p>
               </a>
             </li>
 
@@ -85,10 +71,7 @@
               {% url 'staff_feedback' as staff_feedback %}
               <a href="{{ staff_feedback }}" class="nav-link {% if request.path == staff_feedback %} active {% endif %}">
                 <i class="nav-icon fas fa-comments"></i>
-                <p>
-                  {% trans "Feedback"%}
-                  {% comment %} <span class="right badge badge-danger">{% trans "New"%}</span> {% endcomment %}
-                </p>
+                <p>{% blocktrans %}Feedback{%endblocktrans %}{% comment %} <span class="right badge badge-danger">{% blocktrans %}New{%endblocktrans %}</span>{% endcomment %}</p>
               </a>
             </li>
 

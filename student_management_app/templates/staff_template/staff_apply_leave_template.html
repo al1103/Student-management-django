@@ -16,11 +16,11 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">{% trans "Apply For Leave"%}</h3>
+                        <h3 class="card-title">{% blocktrans %}Apply For Leave{%endblocktrans %}</h3>
                     </div>
                     <!-- /.card-header -->
 
-                                {% comment %} {% trans "Display Messages"%} {% endcomment %}
+                                {% comment %} {% blocktrans %}Display Messages{%endblocktrans %} {% endcomment %}
                                 {% if messages %}
                                 <div class="form-group">
                                 <div class="col-12">
@@ -50,12 +50,12 @@
                         <div class="card-body">
                            
                             <div class="form-group">
-                                <label>{% trans "Leave Date"%} </label>
+                                <label>{% blocktrans %}Leave Date{%endblocktrans %} </label>
                                 <input type="date" name="leave_date" class="form-control" />
                             </div>
 
                             <div class="form-group">
-                                <label>{% trans "Leave Reason"%} </label>
+                                <label>{% blocktrans %}Leave Reason{%endblocktrans %} </label>
                                 <textarea name="leave_message" class="form-control" rows="6" placeholder="Leave Messge"></textarea>
                             </div>
 
@@ -64,7 +64,7 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">{% trans "Apply for Leave"%}</button>
+                        <button type="submit" class="btn btn-primary">{% blocktrans %}Apply for Leave{%endblocktrans %}</button>
                         </div>
 
                     </form>
@@ -81,7 +81,7 @@
                 <div class="col-md-12">
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">{% trans "Leave Apply History"%}</h3>
+                            <h3 class="card-title">{% blocktrans %}Leave Apply History{%endblocktrans %}</h3>
                         </div>
 
                         <div class="card-body">
@@ -90,9 +90,9 @@
                                     <thead class="thead-light">
                                     <tr>
                                         <th>#ID</th>
-                                        <th>{% trans "Leave Date"%}"/th>
-                                        <th>{% trans "Leave Message"%}</th>
-                                        <th>{% trans "Status"%}</th>
+                                        <th>{% blocktrans %}Leave Date{%endblocktrans %}"/th>
+                                        <th>{% blocktrans %}Leave Message{%endblocktrans %}</th>
+                                        <th>{% blocktrans %}Status{%endblocktrans %}</th>
                                     </tr>
                                     </thead>
                                     
@@ -103,11 +103,11 @@
                                         <td>{{ leave.leave_message }}</td>
                                         <td>
                                             {% if leave.leave_status == 1 %}
-                                                <span class="alert alert-success">{% trans "Approved"%}</span>
+                                                <span class="alert alert-success">{% blocktrans %}Approved{%endblocktrans %}</span>
                                             {% elif leave.leave_status == 2 %}
-                                                <span class="alert alert-danger">{% trans "Rejected"%}</span>
+                                                <span class="alert alert-danger">{% blocktrans %}Rejected{%endblocktrans %}</span>
                                             {% else %}
-                                                <span class="alert alert-warning">{% trans "Pending"%}</span>
+                                                <span class="alert alert-warning">{% blocktrans %}Pending{%endblocktrans %}</span>
                                             {% endif %}
                                         </td>
                                     </tr>

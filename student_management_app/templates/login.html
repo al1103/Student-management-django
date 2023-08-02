@@ -3,13 +3,17 @@
 
 {% load static %}
 {% block content %}
-
+<style>
+a {
+  text-decoration: none;
+}
+</style>
 <body class="hold-transition login-page"  data-bs-theme="dark">
   {% include 'darkmode.html' %}
   <div class="login-box">
     <div class="login-logo">
     
-      <a href="{% url 'login' %}"><b>{% blocktrans %}Student{% endblocktrans %}</b>{% blocktrans %} Management System{%endblocktrans %}</a>
+      <a style="color: rgb(137, 137, 137);" href="{% url 'login' %}"><b>{% blocktrans %}Student{% endblocktrans %}</b>{% blocktrans %} Management System{%endblocktrans %}</a>
     </div>
     <!-- /.login-logo -->
     <div class="card">

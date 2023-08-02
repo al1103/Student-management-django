@@ -18,11 +18,11 @@
                     {% csrf_token %}
                     <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">{% trans "Add Result"%}</h3>
+                        <h3 class="card-title">{% blocktrans %}Add Result{% endblocktrans %}</h3>
                     </div>
                     <!-- /.card-header -->
 
-                                {% comment %} {% trans "Display"} Messages {% endcomment %}
+                                {% comment %} Display Messages {% endcomment %}
                                 {% if messages %}
                                 <div class="form-group">
                                 <div class="col-12">
@@ -51,7 +51,7 @@
                         <div class="card-body">
                            
                             <div class="form-group">
-                                <label>{% trans "Subject%} </label>
+                                <label>{% blocktrans %}Subject{% endblocktrans %} </label>
                                 <select class="form-control" name="subject" id="subject">
                                     {% for subject in subjects %}
                                         <option value="{{ subject.id }}">{{ subject.subject_name }}</option>
@@ -60,7 +60,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>{% trans "Session Year" %}</label>
+                                <label>{% blocktrans %}Session Year{% endblocktrans %}</label>
                                 <select class="form-control" name="session_year" id="session_year">
                                     {% for session_year in session_years %}
                                         <option value="{{ session_year.id }}">{{ session_year.session_start_year }} to {{ session_year.session_end_year }}</option>
@@ -73,10 +73,10 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                        <button type="button" class="btn btn-primary" id="fetch_student">{% trans "Fetch Student"%}</button>
+                        <button type="button" class="btn btn-primary" id="fetch_student">{% blocktrans %}Fetch Student{% endblocktrans %}</button>
                         </div>
 
-                        {% comment %}{% trans " Displaying Students Here" %} {% endcomment %}
+                        {% comment %}{% blocktrans %} Displaying Students Here{% endblocktrans %} {% endcomment %}
 
                         <div class="card-footer" id="student_data">
                         </div> 
@@ -115,7 +115,7 @@
                 var json_data=JSON.parse(response);
                 console.log(json_data)
                 //Displaying Attendance Date Input and Students Attendance
-                var div_data="<div class='form-group'><label>Student List</label> <select class='student_list form-control' name='student_list'>"
+                var div_data="<div class='form-group'><label>Danh sách sinh viên</label> <select class='student_list form-control' name='student_list'>"
 
                 for(key in json_data)
                 {
@@ -127,17 +127,17 @@
                 div_data+="<div class='form-group'><div class='row'>";
 
                 div_data+="<div class='col-lg-6'>";
-                div_data+="<label>Assignment Marks : </label><input type='text'name='assignment_marks' class='form-control' placeholder='Assignment Marks' />";
+                div_data+="<label>Điểm bài tập : </label><input type='text'name='assignment_marks' class='form-control' placeholder='Assignment Marks' />";
                 div_data+="</div>";
 
                 div_data+="<div class='col-lg-6'>";
-                div_data+="<label>Exam Marks : </label><input type='text'name='exam_marks' class='form-control' placeholder='Exam Marks' />";
+                div_data+="<label>Điểm kiểm tra : </label><input type='text'name='exam_marks' class='form-control' placeholder='Exam Marks' />";
                 div_data+="</div>";
 
                 div_data+="</div></div>";
 
                 div_data+="<div class='form-group'>";
-                div_data+="<button id='save_attendance' class='btn btn-success' type='submit'>Save Result</button>";
+                div_data+="<button id='save_attendance' class='btn btn-success' type='submit'>Lưu kết quả</button>";
                 div_data+="</div>";
                 $("#student_data").html(div_data);
 

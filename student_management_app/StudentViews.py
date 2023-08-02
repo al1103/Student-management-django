@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.core.files.storage import FileSystemStorage #To upload Profile Picture
 from django.urls import reverse
 import datetime # To Parse input DateTime into Python Date Time Object
-
+from django.utils.translation import ugettext_lazy as _
 from student_management_app.models import CustomUser, Staffs, Courses, Subjects, Students, Attendance, AttendanceReport, LeaveReportStudent, FeedBackStudent, StudentResult
 
 
@@ -112,10 +112,10 @@ def student_apply_leave_save(request):
         try:
             leave_report = LeaveReportStudent(student_id=student_obj, leave_date=leave_date, leave_message=leave_message, leave_status=0)
             leave_report.save()
-            messages.success(request, "Applied for Leave.")
+            messages.success(request, _("Applied for Leave."))
             return redirect('student_apply_leave')
         except:
-            messages.error(request, "Failed to Apply Leave")
+            messages.error(request, _("Failed to Apply Leave"))
             return redirect('student_apply_leave')
 
 
@@ -139,10 +139,10 @@ def student_feedback_save(request):
         try:
             add_feedback = FeedBackStudent(student_id=student_obj, feedback=feedback, feedback_reply="")
             add_feedback.save()
-            messages.success(request, "Feedback Sent.")
+            messages.success(request, _("Feedback Sent."))
             return redirect('student_feedback')
         except:
-            messages.error(request, "Failed to Send Feedback.")
+            messages.error(request, _("Failed to Send Feedback."))
             return redirect('student_feedback')
 
 
@@ -179,10 +179,10 @@ def student_profile_update(request):
             student.address = address
             student.save()
             
-            messages.success(request, "Profile Updated Successfully")
+            messages.success(request, _("Profile Updated Successfully"))
             return redirect('student_profile')
         except:
-            messages.error(request, "Failed to Update Profile")
+            messages.error(request, _("Failed to Update Profile"))
             return redirect('student_profile')
 
 

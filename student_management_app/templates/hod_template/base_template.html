@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -48,28 +49,33 @@
 
 </head>
 <style>
-  [data-bs-theme=light]{
-  --bs-background-change: #e3e3e3 !important;
-  --bs-background-text: #000000 !important;
 
-} 
-[data-bs-theme=dark] {
-  --bs-background-change: #212529 !important;
-  --bs-background-text: #ffffff !important;
- 
+    [data-bs-theme=light]{
+    --bs-background-change: #ffffff !important;
+    --bs-background-text: #000000 !important;
+
+  } 
+  [data-bs-theme=dark] {
+    --bs-background-change: #212529 !important;
+    --bs-background-text: #ffffff !important;
+   
 }
 .content-wrapper,.card{
-background: var(--bs-background-change);
+  background: var(--bs-background-change);
 }
 :is(td, label, p,h1,h2,h3,h4,h5,h6,th,li){
-color: var(--bs-background-text) !important;
+  color: var(--bs-background-text) !important;
+}
+.navbar{
+  background: var(--bs-background-change) !important;
 }
 </style>
-<body class="hold-transition sidebar-mini layout-fixed" data-bs-theme="'light">
+
+<body class="hold-transition sidebar-mini layout-fixed" data-bs-theme="light" >
   <div class="wrapper">
 
   <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <nav class="main-header navbar navbar-expand ">
       <!-- Left navbar links -->
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -77,12 +83,14 @@ color: var(--bs-background-text) !important;
         </li>
       </ul>
 
-      <h4 style="margin-left: 10px; margin-top: 5px;">Student Management System HOD Login</h4>
-      {% include 'darkmode.html'%}
+      <h4 style="margin-left: 10px; margin-top: 5px;">{% blocktrans %}Student Management System HOD Login{% endblocktrans %}</h4>
 
       <ul class="navbar-nav ml-auto">
       
       <!-- Notifications Dropdown Menu -->
+
+      
+    {% include 'darkmode.html' %}
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
           <i class="fas fa-cog"></i>
@@ -90,18 +98,17 @@ color: var(--bs-background-text) !important;
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
           
           <a href="{% url 'admin_profile' %}" class="dropdown-item">
-            <i class="fas fa-user-edit mr-2"></i> Update Profile
+            <i class="fas fa-user-edit mr-2"></i> {% blocktrans %}Update Profile{% endblocktrans %}
           </a>
 
           <div class="dropdown-divider"></div>
           <a href="{% url 'logout_user' %}" class="dropdown-item">
-            <i class="fas fa-power-off mr-2"></i> Logout
+            <i class="fas fa-power-off mr-2"></i> {% blocktrans %}Logout{% endblocktrans %}
           </a>
           <div class="dropdown-divider"></div>
         </div>
       </li>
     </ul>
-
     </nav>
     <!-- /.navbar -->
 
@@ -123,7 +130,7 @@ color: var(--bs-background-text) !important;
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="{% url 'admin_home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'admin_home' %}">{% blocktrans %}Home{% endblocktrans %}</a></li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->

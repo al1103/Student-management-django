@@ -6,6 +6,7 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 import json
+from django.utils.translation import ugettext_lazy as _
 
 from student_management_app.models import CustomUser, Staffs, Courses, Subjects, Students, SessionYearModel, FeedBackStudent, FeedBackStaffs, LeaveReportStudent, LeaveReportStaff, Attendance, AttendanceReport
 from .forms import AddStudentForm, EditStudentForm
@@ -108,10 +109,10 @@ def add_staff_save(request):
             user = CustomUser.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name, user_type=2)
             user.staffs.address = address
             user.save()
-            messages.success(request, "Staff Added Successfully!")
+            messages.success(request, _("Staff Added Successfully!"))
             return redirect('add_staff')
         except:
-            messages.error(request, "Failed to Add Staff!")
+            messages.error(request, _("Failed to Add Staff!"))
             return redirect('add_staff')
 
 
@@ -159,11 +160,11 @@ def edit_staff_save(request):
             staff_model.address = address
             staff_model.save()
 
-            messages.success(request, "Staff Updated Successfully.")
+            messages.success(request, _("Staff Updated Successfully."))
             return redirect('/edit_staff/'+staff_id)
 
         except:
-            messages.error(request, "Failed to Update Staff.")
+            messages.error(request, _("Failed to Update Staff."))
             return redirect('/edit_staff/'+staff_id)
 
 
@@ -172,10 +173,10 @@ def delete_staff(request, staff_id):
     staff = Staffs.objects.get(admin=staff_id)
     try:
         staff.delete()
-        messages.success(request, "Staff Deleted Successfully.")
+        messages.success(request, _("Staff Deleted Successfully."))
         return redirect('manage_staff')
     except:
-        messages.error(request, "Failed to Delete Staff.")
+        messages.error(request, _("Failed to Delete Staff."))
         return redirect('manage_staff')
 
 
@@ -194,10 +195,10 @@ def add_course_save(request):
         try:
             course_model = Courses(course_name=course)
             course_model.save()
-            messages.success(request, "Course Added Successfully!")
+            messages.success(request, _("Course Added Successfully!"))
             return redirect('add_course')
         except:
-            messages.error(request, "Failed to Add Course!")
+            messages.error(request, _("Failed to Add Course!"))
             return redirect('add_course')
 
 
@@ -230,11 +231,11 @@ def edit_course_save(request):
             course.course_name = course_name
             course.save()
 
-            messages.success(request, "Course Updated Successfully.")
+            messages.success(request, _("Course Updated Successfully."))
             return redirect('/edit_course/'+course_id)
 
         except:
-            messages.error(request, "Failed to Update Course.")
+            messages.error(request, _("Failed to Update Course."))
             return redirect('/edit_course/'+course_id)
 
 
@@ -242,10 +243,10 @@ def delete_course(request, course_id):
     course = Courses.objects.get(id=course_id)
     try:
         course.delete()
-        messages.success(request, "Course Deleted Successfully.")
+        messages.success(request, _("Course Deleted Successfully."))
         return redirect('manage_course')
     except:
-        messages.error(request, "Failed to Delete Course.")
+        messages.error(request, _("Failed to Delete Course."))
         return redirect('manage_course')
 
 
@@ -272,10 +273,10 @@ def add_session_save(request):
         try:
             sessionyear = SessionYearModel(session_start_year=session_start_year, session_end_year=session_end_year)
             sessionyear.save()
-            messages.success(request, "Session Year added Successfully!")
+            messages.success(request, _("Session Year added Successfully!"))
             return redirect("add_session")
         except:
-            messages.error(request, "Failed to Add Session Year")
+            messages.error(request, _("Failed to Add Session Year"))
             return redirect("add_session")
 
 
@@ -302,10 +303,10 @@ def edit_session_save(request):
             session_year.session_end_year = session_end_year
             session_year.save()
 
-            messages.success(request, "Session Year Updated Successfully.")
+            messages.success(request, _("Session Year Updated Successfully."))
             return redirect('/edit_session/'+session_id)
         except:
-            messages.error(request, "Failed to Update Session Year.")
+            messages.error(request, _("Failed to Update Session Year."))
             return redirect('/edit_session/'+session_id)
 
 
@@ -313,10 +314,10 @@ def delete_session(request, session_id):
     session = SessionYearModel.objects.get(id=session_id)
     try:
         session.delete()
-        messages.success(request, "Session Deleted Successfully.")
+        messages.success(request, _("Session Deleted Successfully."))
         return redirect('manage_session')
     except:
-        messages.error(request, "Failed to Delete Session.")
+        messages.error(request, _("Failed to Delete Session."))
         return redirect('manage_session')
 
 
@@ -373,10 +374,10 @@ def add_student_save(request):
                 user.students.gender = gender
                 user.students.profile_pic = profile_pic_url
                 user.save()
-                messages.success(request, "Student Added Successfully!")
+                messages.success(request, _("Student Added Successfully!"))
                 return redirect('add_student')
             except:
-                messages.error(request, "Failed to Add Student!")
+                messages.error(request, _("Failed to Add Student!"))
                 return redirect('add_student')
         else:
             return redirect('add_student')
@@ -470,10 +471,10 @@ def edit_student_save(request):
                 # Delete student_id SESSION after the data is updated
                 del request.session['student_id']
 
-                messages.success(request, "Student Updated Successfully!")
+                messages.success(request, _("Student Updated Successfully!"))
                 return redirect('/edit_student/'+student_id)
             except:
-                messages.success(request, "Failed to Uupdate Student.")
+                messages.success(request, _("Failed to Uupdate Student."))
                 return redirect('/edit_student/'+student_id)
         else:
             return redirect('/edit_student/'+student_id)
@@ -483,10 +484,10 @@ def delete_student(request, student_id):
     student = Students.objects.get(admin=student_id)
     try:
         student.delete()
-        messages.success(request, "Student Deleted Successfully.")
+        messages.success(request, _("Student Deleted Successfully."))
         return redirect('manage_student')
     except:
-        messages.error(request, "Failed to Delete Student.")
+        messages.error(request, _("Failed to Delete Student."))
         return redirect('manage_student')
 
 
@@ -517,10 +518,10 @@ def add_subject_save(request):
         try:
             subject = Subjects(subject_name=subject_name, course_id=course, staff_id=staff)
             subject.save()
-            messages.success(request, "Subject Added Successfully!")
+            messages.success(request, _("Subject Added Successfully!"))
             return redirect('add_subject')
         except:
-            messages.error(request, "Failed to Add Subject!")
+            messages.error(request, _("Failed to Add Subject!"))
             return redirect('add_subject')
 
 
@@ -566,12 +567,12 @@ def edit_subject_save(request):
             
             subject.save()
 
-            messages.success(request, "Subject Updated Successfully.")
+            messages.success(request, _("Subject Updated Successfully."))
             # return redirect('/edit_subject/'+subject_id)
             return HttpResponseRedirect(reverse("edit_subject", kwargs={"subject_id":subject_id}))
 
         except:
-            messages.error(request, "Failed to Update Subject.")
+            messages.error(request, _("Failed to Update Subject."))
             return HttpResponseRedirect(reverse("edit_subject", kwargs={"subject_id":subject_id}))
             # return redirect('/edit_subject/'+subject_id)
 
@@ -581,10 +582,10 @@ def delete_subject(request, subject_id):
     subject = Subjects.objects.get(id=subject_id)
     try:
         subject.delete()
-        messages.success(request, "Subject Deleted Successfully.")
+        messages.success(request, _("Subject Deleted Successfully."))
         return redirect('manage_subject')
     except:
-        messages.error(request, "Failed to Delete Subject.")
+        messages.error(request, _("Failed to Delete Subject."))
         return redirect('manage_subject')
 
 
@@ -626,10 +627,10 @@ def student_feedback_message_reply(request):
         feedback = FeedBackStudent.objects.get(id=feedback_id)
         feedback.feedback_reply = feedback_reply
         feedback.save()
-        return HttpResponse("True")
+        return HttpResponse(_("True"))
 
     except:
-        return HttpResponse("False")
+        return HttpResponse(_("False"))
 
 
 def staff_feedback_message(request):
@@ -649,10 +650,10 @@ def staff_feedback_message_reply(request):
         feedback = FeedBackStaffs.objects.get(id=feedback_id)
         feedback.feedback_reply = feedback_reply
         feedback.save()
-        return HttpResponse("True")
+        return HttpResponse(_("True"))
 
     except:
-        return HttpResponse("False")
+        return HttpResponse(_("False"))
 
 
 def student_leave_view(request):
@@ -775,10 +776,10 @@ def admin_profile_update(request):
             if password != None and password != "":
                 customuser.set_password(password)
             customuser.save()
-            messages.success(request, "Profile Updated Successfully")
+            messages.success(request, _("Profile Updated Successfully"))
             return redirect('admin_profile')
         except:
-            messages.error(request, "Failed to Update Profile")
+            messages.error(request, _("Failed to Update Profile"))
             return redirect('admin_profile')
     
 

@@ -5,6 +5,7 @@
 {% endblock page_title %}
 
 {% block main_content %}
+{% load i18n %}
 
 {% load static %}
 
@@ -16,7 +17,7 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Add Subject</h3>
+                        <h3 class="card-title">{% blocktrans %}Add Subject{% endblocktrans %}</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
@@ -52,12 +53,12 @@
 
                         <div class="card-body">
                             <div class="form-group">
-                                <label>Subject Name </label>
+                                <label>{% blocktrans %}Subject Name{% endblocktrans %}</label>
                                 <input type="text" class="form-control" name="subject" placeholder="Enter Subject">
                             </div>
 
                             <div class="form-group">
-                                <label>Course </label>
+                                <label>{% blocktrans %}Course{% endblocktrans %}</label>
                                 <select class="form-control" name="course">
                                     {% for course in courses %}
                                         <option value="{{ course.id }}">{{ course.course_name }}</option>
@@ -66,7 +67,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Staff </label>
+                                <label>{% blocktrans %}Staff{% endblocktrans %}</label>
                                 <select class="form-control" name="staff">
                                     {% for staff in staffs %}
                                         <option value="{{ staff.id }}">{{ staff.first_name }} {{ staff.last_name }}</option>
@@ -78,7 +79,7 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Add Subject</button>
+                        <button type="submit" class="btn btn-primary">{% blocktrans %}Add Subject{% endblocktrans %}</button>
                         </div>
                     </form>
                     </div>

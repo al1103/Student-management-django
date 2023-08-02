@@ -5,6 +5,7 @@
 {% endblock page_title %}
 
 {% block main_content %}
+{% load i18n %}
 
 {% load static %}
 
@@ -16,7 +17,7 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Leave Apply by Students</h3>
+                            <h3 class="card-title">{% blocktrans %}Leave Apply by Students{% endblocktrans %}</h3>
                         </div>
                         <!-- /.card-header -->
 
@@ -25,12 +26,12 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Student ID</th>
-                                    <th>Student Name</th>
-                                    <th>Leave Date</th>
-                                    <th>Leave Message</th>
-                                    <th>Applied On</th>
-                                    <th>Action</th>
+                                    <th>{% blocktrans %}Student ID{% endblocktrans %}</th>
+                                    <th>{% blocktrans %}Student Name{% endblocktrans %}</th>
+                                    <th>{% blocktrans %}Leave Date{% endblocktrans %}</th>
+                                    <th>{% blocktrans %}Leave Message{% endblocktrans %}</th>
+                                    <th>{% blocktrans %}Applied On{% endblocktrans %}</th>
+                                    <th>{% blocktrans %}Action{% endblocktrans %}</th>
                                 </tr>
                                 </thead>
 
@@ -45,12 +46,12 @@
                                     <td>{{ leave.created_at }}</td>
                                     <td>
                                         {% if leave.leave_status == 0 %}
-                                            <a href="{% url 'student_leave_approve' leave_id=leave.id %}" class="btn btn-success">Approve</a>
-                                            <a href="{% url 'student_leave_reject' leave_id=leave.id %}" class="btn btn-danger">Reject</a>
+                                            <a href="{% url 'student_leave_approve' leave_id=leave.id %}" class="btn btn-success">{% blocktrans %}Approve{% endblocktrans %}</a>
+                                            <a href="{% url 'student_leave_reject' leave_id=leave.id %}" class="btn btn-danger">{% blocktrans %}Reject{% endblocktrans %}</a>
                                         {% elif leave.leave_status == 1 %}
-                                            <button class="btn btn-warning" disabled="disabled">Approved</button>
+                                            <button class="btn btn-warning" disabled="disabled">{% blocktrans %}Approved{% endblocktrans %}</button>
                                         {% else %}
-                                            <button class="btn btn-danger" disabled="disabled">Rejected</button>
+                                            <button class="btn btn-danger" disabled="disabled">{% blocktrans %}Rejected{% endblocktrans %}</button>
                                         {% endif %}
                                         
                                     </td>

@@ -16,7 +16,7 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">{% trans "Update Profile"%}</h3>
+                        <h3 class="card-title">{% blocktrans %}Update Profile{%endblocktrans %}</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
@@ -24,7 +24,7 @@
                         {% csrf_token %}
 
                         
-                                {% comment %}{% trans " Display Messages "%}{% endcomment %}
+                                {% comment %}{% blocktrans %} Display Messages {%endblocktrans %}{% endcomment %}
                                 {% if messages %}
                                 <div class="form-group">
                                 <div class="col-12">
@@ -52,32 +52,32 @@
 
                         <div class="card-body">
                             <div class="form-group">
-                                <label>{% trans "Username"%} </label>
+                                <label>{% blocktrans %}Username{%endblocktrans %} </label>
                                 <input type="text" class="form-control" name="username" value="{{ user.username }}" disabled="disabled">
                             </div>
 
                             <div class="form-group">
-                                <label>{% trans "Email "%}</label>
+                                <label>{% blocktrans %}Email{%endblocktrans %}</label>
                                 <input type="text" class="form-control" name="email" value="{{ user.email }}" disabled="disabled">
                             </div>
 
                             <div class="form-group">
-                                <label>{% trans "First Name "%}</label>
+                                <label>{% blocktrans %}First Name{%endblocktrans %}</label>
                                 <input type="text" class="form-control" name="first_name" value="{{ user.first_name }}">
                             </div>
 
                             <div class="form-group">
-                                <label>{% trans "Last Name "%}</label>
+                                <label>{% blocktrans %}Last Name{%endblocktrans %}</label>
                                 <input type="text" class="form-control" name="last_name" value="{{ user.last_name }}">
                             </div>
 
                             <div class="form-group">
-                                <label>{% trans "Address"%} </label>
+                                <label>{% blocktrans %}Address{%endblocktrans %} </label>
                                 <textarea name="address" class="form-control" row="5">{{ student.address }}</textarea>
                             </div>
 
                             <div class="form-group">
-                                <label>{% trans "Password"%} </label>
+                                <label>{% blocktrans %}Password{%endblocktrans %} </label>
                                 <input type="text" class="form-control" name="password" placeholder="Fill only if you want to change Password.">
                             </div>
 
@@ -85,7 +85,7 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">{% trans "Update Profile"%}</button>
+                        <button type="submit" class="btn btn-primary">{% blocktrans %}Update Profile{%endblocktrans %}</button>
                         </div>
                     </form>
                     </div>

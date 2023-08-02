@@ -5,6 +5,7 @@
 {% endblock page_title %}
 
 {% block main_content %}
+{% load i18n %}
 
 {% load static %}
 
@@ -16,7 +17,7 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Edit Session Year</h3>
+                        <h3 class="card-title">{% blocktrans %}Edit Session Year{% endblocktrans %}</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
@@ -52,12 +53,12 @@
 
                         <div class="card-body">
                             <div class="form-group">
-                                <label>Session Start Year </label>
+                                <label>{% blocktrans %}Session Start Year {% endblocktrans %}</label>
                                 <input type="date" class="form-control" name="session_start_year" value="{{ session_year.session_start_year|date:'Y-m-d' }}">
                             </div>
 
                             <div class="form-group">
-                                <label>Session End Year </label>
+                                <label>{% blocktrans %}Session End Year {% endblocktrans %}</label>
                                 <input type="date" class="form-control" name="session_end_year" value="{{ session_year.session_end_year|date:'Y-m-d' }}">
                             </div>
 
@@ -66,7 +67,7 @@
 
                         <div class="card-footer">
                         <input type="hidden" name="session_id" value="{{ session_year.id }}" />
-                        <button type="submit" class="btn btn-primary">Update Session Year</button>
+                        <button type="submit" class="btn btn-primary">{% blocktrans %}Update Session Year{% endblocktrans %}</button>
                         </div>
                     </form>
                     </div>

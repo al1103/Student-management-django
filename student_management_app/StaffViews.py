@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 import json
-
+from django.utils.translation import ugettext_lazy as _
 
 from student_management_app.models import CustomUser, Staffs, Courses, Subjects, Students, SessionYearModel, Attendance, AttendanceReport, LeaveReportStaff, FeedBackStaffs, StudentResult
 
@@ -100,10 +100,10 @@ def staff_apply_leave_save(request):
         try:
             leave_report = LeaveReportStaff(staff_id=staff_obj, leave_date=leave_date, leave_message=leave_message, leave_status=0)
             leave_report.save()
-            messages.success(request, "Applied for Leave.")
+            messages.success(request, _("Applied for Leave."))
             return redirect('staff_apply_leave')
         except:
-            messages.error(request, "Failed to Apply Leave")
+            messages.error(request, _("Failed to Apply Leave"))
             return redirect('staff_apply_leave')
 
 
@@ -127,10 +127,10 @@ def staff_feedback_save(request):
         try:
             add_feedback = FeedBackStaffs(staff_id=staff_obj, feedback=feedback, feedback_reply="")
             add_feedback.save()
-            messages.success(request, "Feedback Sent.")
+            messages.success(request, _("Feedback Sent."))
             return redirect('staff_feedback')
         except:
-            messages.error(request, "Failed to Send Feedback.")
+            messages.error(request, _("Failed to Send Feedback."))
             return redirect('staff_feedback')
 
 
@@ -189,7 +189,7 @@ def save_attendance_data(request):
             attendance_report.save()
         return HttpResponse("OK")
     except:
-        return HttpResponse("Error")
+        return HttpResponse(_("Error"))
 
 
 
@@ -268,7 +268,7 @@ def update_attendance_data(request):
             attendance_report.save()
         return HttpResponse("OK")
     except:
-        return HttpResponse("Error")
+        return HttpResponse(_("Error"))
 
 
 def staff_profile(request):
@@ -304,10 +304,10 @@ def staff_profile_update(request):
             staff.address = address
             staff.save()
 
-            messages.success(request, "Profile Updated Successfully")
+            messages.success(request, _("Profile Updated Successfully"))
             return redirect('staff_profile')
         except:
-            messages.error(request, "Failed to Update Profile")
+            messages.error(request, _("Failed to Update Profile"))
             return redirect('staff_profile')
 
 
@@ -343,13 +343,13 @@ def staff_add_result_save(request):
                 result.subject_assignment_marks = assignment_marks
                 result.subject_exam_marks = exam_marks
                 result.save()
-                messages.success(request, "Result Updated Successfully!")
+                messages.success(request, _("Result Updated Successfully!"))
                 return redirect('staff_add_result')
             else:
                 result = StudentResult(student_id=student_obj, subject_id=subject_obj, subject_exam_marks=exam_marks, subject_assignment_marks=assignment_marks)
                 result.save()
-                messages.success(request, "Result Added Successfully!")
+                messages.success(request, _("Result Added Successfully!"))
                 return redirect('staff_add_result')
         except:
-            messages.error(request, "Failed to Add Result!")
+            messages.error(request, _("Failed to Add Result!"))
             return redirect('staff_add_result')
