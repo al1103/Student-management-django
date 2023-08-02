@@ -45,13 +45,22 @@
   .login-card-body, .register-card-body ,.login-page{
     background:var(--bs-background-change);
     }
-  [data-bs-theme=light]{
-    --bs-background-change: #e3e3e3 !important;
+    [data-bs-theme=light]{
+  --bs-background-change: #e3e3e3 !important;
+  --bs-background-text: #000000 !important;
+  --bs-boxshadow:  0 0 1px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.5); ;
 
-  } 
-  [data-bs-theme=dark] {
-    --bs-background-change: #212529 !important;
-   
+} 
+[data-bs-theme=dark] {
+  --bs-background-change:#32323d !important;
+
+  --bs-background-text: #ffffff !important;
+  --bs-boxshadow:  0 0 1px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(255, 255, 255, 0.5); ;
+ 
+}
+.content-wrapper,.card{
+background: var(--bs-background-change);
+box-shadow: var(--bs-boxshadow) !important;
 }
 .dropdown{
   background:var(--bs-background-change);

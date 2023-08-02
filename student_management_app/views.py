@@ -57,4 +57,8 @@ def logout_user(request):
     logout(request)
     return HttpResponseRedirect('/')
 
-
+def my_view(request):
+    current_path = "haha"
+   
+    context = {'current_path': current_path}
+    return render(request, 'language.html', context)

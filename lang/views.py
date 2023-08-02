@@ -21,6 +21,7 @@ def translate(language):
         activate(cur_language)
     return text
 
-def my_view(request):
-    current_url = request.build_absolute_uri()
-    return render(request, 'language.html', {'current_url': current_url})
+def your_view(request):
+    tong = 0  # Đây là biến bạn muốn tạo
+    context = {'tong': tong}
+    return render(request, 'language.html', context)

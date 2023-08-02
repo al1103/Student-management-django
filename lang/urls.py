@@ -5,4 +5,5 @@ app_name = 'lang'
 
 urlpatterns = [
     path('login/', views.login_view, name='login'),
+    
 ]

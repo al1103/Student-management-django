@@ -39,15 +39,19 @@
   [data-bs-theme=light]{
   --bs-background-change: #e3e3e3 !important;
   --bs-background-text: #000000 !important;
+  --bs-boxshadow:  0 0 1px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.5); ;
 
 } 
 [data-bs-theme=dark] {
-  --bs-background-change: #212529 !important;
+  --bs-background-change:#32323d !important;
   --bs-background-text: #ffffff !important;
+  --bs-boxshadow:  0 0 1px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(255, 255, 255, 0.5); ;
  
 }
 .content-wrapper,.card{
 background: var(--bs-background-change);
+box-shadow: var(--bs-boxshadow) !important;
+
 }
 :is(td, label, p,h1,h2,h3,h4,h5,h6,th){
 color: var(--bs-background-text) !important;
@@ -76,6 +80,7 @@ color: var(--bs-background-text) !important;
       <!-- Notifications Dropdown Menu -->
       
     {% include 'darkmode.html' %}
+    {% include 'language.html' %}
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
           <i class="fas fa-cog"></i>
