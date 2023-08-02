@@ -1,4 +1,4 @@
-# Django Student Management System (beta)
+# Django Student Management System edited by Group 1 (beta)
 This is a Simple Student Management System Developed for Educational Purpose using Python (Django).
 Feel free to make changes based on your requirements.
 
@@ -36,7 +36,9 @@ And if you like this project then ADD a STAR ⭐️  to this project 👆
 5. Send Feedback to HOD
 
 ### Translated to Vietnamese (NEW)
-We have translated the system into Vietnamese (90%)
+We have translated the system into Vietnamese (98%)
+
+### Dark Mode (NEW)
 
 ## Support Developer
 1. Subscribe & Share my YouTube Channel - https://bit.ly/vijay-thapa-online-courses
@@ -165,9 +167,9 @@ Password: student
 2. LinkedIn - [vijaythapa](https://www.linkedin.com/in/vijaythapa "Vijay Thapa on LinkedIn")
 
 ## Dự án đã được chỉnh sửa bởi Nhóm 1
-Phạm Anh Tuấn (2121050439) (C)
-Nguyễn Hồ Việt Anh (2121050383)
-Trần Đức Mạnh (2121050332) 
-Nguyễn Minh Tiến (2121050346) 
-Vũ Hà Huy Tuấn (2121050405) 
+1. Phạm Anh Tuấn (2121050439) (C)
+2. Nguyễn Hồ Việt Anh (2121050383)
+3. Trần Đức Mạnh (2121050332) 
+4. Nguyễn Minh Tiến (2121050346) 
+5. Vũ Hà Huy Tuấn (2121050405) 
 
