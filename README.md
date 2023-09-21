@@ -168,8 +168,5 @@ Password: student
 
 ## Dự án đã được chỉnh sửa bởi Nhóm 1
 1. Phạm Anh Tuấn (2121050439) (C)
-2. Nguyễn Hồ Việt Anh (2121050383)
-3. Trần Đức Mạnh (2121050332) 
 4. Nguyễn Minh Tiến (2121050346) 
-5. Vũ Hà Huy Tuấn (2121050405) 
 
